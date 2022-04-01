@@ -7,10 +7,11 @@ import {
   Button,
   Image,
 } from "react-bootstrap";
+
 import { useContext } from "react";
 import { Link, useHistory } from "react-router-dom";
 
-import logo from "./../logo.svg";
+import logo from "../assets/img/logoF.png";
 import { useForm } from "react-hook-form";
 import { AppContext } from "../components/StateProvider";
 
@@ -46,6 +47,7 @@ function Login() {
         return alert(err.message);
       });
   };
+
   return (
     <Container>
       <Row

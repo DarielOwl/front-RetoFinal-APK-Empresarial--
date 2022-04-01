@@ -45,7 +45,7 @@ function Register() {
     setDoc(docuRef, { correo: email, rol: rol });
   }
 
-  function submitHandler(e) {
+  function submitHandlerRegister(e) {
     e.preventDefault();
 
     const email = e.target.elements.email.value;
@@ -54,18 +54,10 @@ function Register() {
 
     console.log("submit", email, password, rol);
 
-    if (password.length < 6) {
-      window.alert("nop");
-      return false;
-    }
+    //Registrar Usuario
+    registrarUsuario(email, password, rol);
 
-    if (isRegistrando) {
-      // registrar
-      registrarUsuario(email, password, rol);
-    } else {
-      // login
-      signInWithEmailAndPassword(auth, email, password);
-    }
+    alert("Registracion Exitosa!");
   }
 
   return (
@@ -98,7 +90,7 @@ function Register() {
 
             {/* Form Main */}
             <Toast.Body>
-              <Form onSubmit={submitHandler}>
+              <Form onSubmit={submitHandlerRegister}>
                 <Form.Row>
                  
                   {/* Email */}
