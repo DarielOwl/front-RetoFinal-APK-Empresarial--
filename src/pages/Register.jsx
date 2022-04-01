@@ -15,7 +15,7 @@ import {
   InputGroup,
 } from "react-bootstrap";
 
-import logo from '../assets/img/logoF.png'
+import logo from "../assets/img/logoF.png";
 
 //Dependencias de Firebase
 import firebaseApp from "../firebase/credencial";
@@ -54,7 +54,7 @@ function Register() {
 
     console.log("submit", email, password, rol);
 
-    if(password.length<6){
+    if (password.length < 6) {
       window.alert("nop");
       return false;
     }
@@ -85,7 +85,7 @@ function Register() {
               <Col sm={8}>
                 <h2>
                   <i className="fas fa-user icon" arial-hidden="true"></i>
-                  <strong>Register</strong>
+                  <strong>Registrarse</strong>
                 </h2>
               </Col>
               <Col sm={4}>
@@ -96,11 +96,11 @@ function Register() {
             </Row>
             <hr />
 
-            {/* Form here */}
+            {/* Form Main */}
             <Toast.Body>
-              <Form>
+              <Form onSubmit={submitHandler}>
                 <Form.Row>
-                  
+                 
                   {/* Email */}
                   <Form.Group as={Col} sm={12}>
                     <Form.Label>Email</Form.Label>
@@ -111,7 +111,6 @@ function Register() {
                         placeholder="Enter email"
                         name="email"
                         id="email"
-                        onBlur={submitHandler}
                       />
                     </InputGroup>
                   </Form.Group>
@@ -127,8 +126,20 @@ function Register() {
                         placeholder="Password"
                         name="password"
                         id="password"
-                        onBlur={submitHandler}
                       />
+                    </InputGroup>
+                  </Form.Group>
+                </Form.Row>
+
+                {/* Rol */}
+                <Form.Row>
+                  <Form.Group as={Col} md={6} sm={12}>
+                    <Form.Label>Rol</Form.Label>
+                    <InputGroup>
+                      <select id="rol">
+                        <option value="admin">Administrador</option>
+                        <option value="user">Usuario</option>
+                      </select>
                     </InputGroup>
                   </Form.Group>
                 </Form.Row>
@@ -140,9 +151,9 @@ function Register() {
               </Form>
 
               <p>
-                Already registered? <Link to="/login">Login Here</Link>&nbsp; |
+                ¿Ya estas Registrado? <Link to="/login">Ingrese Aqui</Link>&nbsp; |
                 &nbsp;
-                <Link to="/home">Home</Link>
+                <Link to="/home">Inicio</Link>
               </p>
             </Toast.Body>
           </Toast>
