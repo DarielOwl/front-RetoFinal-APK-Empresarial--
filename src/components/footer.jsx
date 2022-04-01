@@ -22,7 +22,7 @@ const Footer = () => {
             md={8}
             className="d-flex justify-content-center align-items-center"
           >
-            <p className="text-muted"><small>Copyright 2021 Evelyn Anyebe</small></p>
+            <p className="text-muted"><small>Copyright 2022 Dariel de Sosa</small></p>
           </Col>
         </Row>
       </Container>
