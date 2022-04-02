@@ -9,7 +9,7 @@ function ViewShoppingList() {
 
   return (
     <Container>
-      <Row
+      <Row xs="auto"
         className="d-flex justify-content-center align-items-center mt-5"
         noGutters
       >
@@ -18,7 +18,7 @@ function ViewShoppingList() {
           <hr />
         </Col>
         <Col md={2} sm={12}></Col>
-        
+
         <Col md={2} sm={12}>
           <Nav fill className="togglebutton">
             <Nav.Item onClick={toggleShow}>
@@ -28,6 +28,20 @@ function ViewShoppingList() {
             </Nav.Item>
           </Nav>
         </Col>
+        
+        <Col md={2} sm={12}>
+          <Nav fill className="togglebutton">
+            <Nav.Item onClick={toggleShow}>
+              <Button variant="dark" type="submit">
+                Añadir Proveedor
+              </Button>
+            </Nav.Item>
+          </Nav>
+        </Col>
+
+
+
+
       </Row>
     </Container>
   );

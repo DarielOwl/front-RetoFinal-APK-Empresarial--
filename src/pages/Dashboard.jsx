@@ -1,18 +1,12 @@
-import {useContext} from 'react';
-import {useHistory} from 'react-router-dom';
-import {AppContext} from './../components/StateProvider';
-
-import AddCliente from "../pages/AddCliente";
+import AddCliente from "../components/AddClient";
+import AddProveedor from "../components/AddProveedor";
 import ViewShoppingList from "../components/viewShoppingList";
-import AddItemForm from "../components/addItemForm";
-
 
 function Dashboard() {
-  const history = useHistory();
-  const { state } = useContext(AppContext);
   return (
     <main className="dashboard">
-      <AddItemForm />
+      <AddCliente/>
+      <AddProveedor/>
       <ViewShoppingList />
 
     </main>
@@ -22,4 +16,4 @@ function Dashboard() {
 export default Dashboard;
 
 
-//      <AddCliente/>
+//      
