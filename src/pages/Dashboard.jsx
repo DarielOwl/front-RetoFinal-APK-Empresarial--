@@ -11,7 +11,6 @@ function Dashboard() {
   const { state } = useContext(AppContext);
   return (
     <main className="dashboard">
-       {!state.isLoggedIn? history.replace("/home"):""}
       <AddItemForm />
       <ViewShoppingList />
     </main>

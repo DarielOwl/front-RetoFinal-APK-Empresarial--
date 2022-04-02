@@ -7,8 +7,6 @@ function Home() {
   return (
     <>
       <Header />
-      <Hero />
-      <About />
     </>
   );
 }

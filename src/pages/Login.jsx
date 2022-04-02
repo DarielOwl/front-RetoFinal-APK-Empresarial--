@@ -8,8 +8,7 @@ import {
   Image,
 } from "react-bootstrap";
 
-
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 
 import logo from "../assets/img/logoF.png";
 
@@ -25,8 +24,7 @@ const auth = getAuth(firebaseApp);
 
 function Login() {
 
-
-  //const firestore = getFirestore(firebaseApp);
+  const history = useHistory();
 
   //Loging con Firebase
   function submitHandlerLogin(e) {
@@ -45,12 +43,17 @@ function Login() {
         email: user.email,
         usuario: email.split("@")[0],
       }
+
     })
     .catch((error) => {
       const errorCode = error.code;
       const errorMessage = error.message;
       //window.alert("Error : " + errorMessage);
     });
+
+    //Si ingresa manda al dashboard
+    history.replace("/dashboard");
+ 
   }
 
 
@@ -99,7 +102,7 @@ function Login() {
                 </Form.Group>
 
                 <Form.Group>
-                  {/* Email */}
+                  {/* Password */}
                   <Form.Label>Password</Form.Label>
                   <Form.Control
                     type="password"
@@ -110,7 +113,7 @@ function Login() {
                 </Form.Group>
 
                 <Button variant="success" type="submit">
-                  Login
+                  Iniciar
                 </Button>
               </Form>
 
