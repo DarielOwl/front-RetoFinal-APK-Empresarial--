@@ -8,7 +8,7 @@ const Header = () => {
       <div className="header-section-1">
         <div className="header-image">
           <Overlay />
-          <Image src="./images/Green-background.jpg" />
+          <Image src="./images/fondoHerramienta.jpg" />
         </div>
         <div className="header-content mt-5">
           <Row>
@@ -18,7 +18,7 @@ const Header = () => {
             >
               <h1>Bienvenido a Ferreteria Raul</h1>
               <Link to="/register">
-                <Button variant="success" className="btn-lg">
+                <Button variant="light" className="btn-lg">
                   Comenzar
                 </Button>
               </Link>

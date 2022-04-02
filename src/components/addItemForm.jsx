@@ -203,7 +203,7 @@ function AddItemForm() {
                 <span id="descriptionError" className="error">
                   {descInputError}
                 </span>
-                <Button variant="success" type="submit">
+                <Button variant="dark" type="submit">
                   <i className="fas fa-plus icon" arial-hidden="true"></i>
                 </Button>
               </Form>

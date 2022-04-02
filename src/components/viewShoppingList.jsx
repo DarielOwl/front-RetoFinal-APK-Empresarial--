@@ -5,7 +5,7 @@ import Item from "./item";
 
 function ViewShoppingList() {
   const { toggleShow, list } = useContext(AppContext);
-  // console.log(list);
+
   return (
     <Container>
       <Row
@@ -15,14 +15,14 @@ function ViewShoppingList() {
         <Col md={2} sm={12}>
           <Nav fill className="togglebutton">
             <Nav.Item onClick={toggleShow}>
-              <Button variant="success" type="submit">
+              <Button variant="dark" type="submit">
                 <i className="fas fa-plus icon" arial-hidden="true"></i>
               </Button>
             </Nav.Item>
           </Nav>
         </Col>
         <Col sm={12} md={8}>
-          <h3>My Todos</h3>
+          <h3>Menu Principal</h3>
           <hr />
           <div className="#view-items">
           {list.map((item,idx) => {

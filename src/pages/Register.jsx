@@ -137,7 +137,7 @@ function Register() {
                 </Form.Row>
 
                 {/* Submit button */}
-                <Button variant="success" type="submit">
+                <Button variant="dark" type="submit">
                   Register
                 </Button>
               </Form>

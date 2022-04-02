@@ -3,11 +3,6 @@ import Button from "./button";
 import { AppContext } from "./StateProvider";
 
 function Item({ itemID, title, description, completed, toggleInput }) {
-  /**This manages the status of an item whether active or done mode.
-   * 0 is done; 1 is active */
-  // const [completed, setcompleted] = useState(completed);
-  // const [itemClass, setItemClass] = useState("item");
-
 
   const { setItemToEdit, editItem } = useContext(AppContext);
 

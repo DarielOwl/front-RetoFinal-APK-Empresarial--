@@ -29,7 +29,7 @@ function NavBar() {
     <>
       <Container>
         {!paths.includes(location.pathname) && (
-          <Navbar expand="lg" fixed="top" bg="success" variant="light">
+          <Navbar expand="lg" fixed="top" bg="dark" variant="light">
             <Navbar.Brand href="/home">
               <img
                 src={logoF}

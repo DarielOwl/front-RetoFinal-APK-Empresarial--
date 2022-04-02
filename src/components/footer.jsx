@@ -8,10 +8,10 @@ const Footer = () => {
   const {  paths } = useContext(AppContext);
  
   return (
-    <footer className="mt-5">
+    <footer className="mt-5" >
        {!paths.includes(pathname) && (
      
-      <Container fluid>
+      <Container fluid >
          <hr className="line"/>
         <Row
           className="d-flex justify-content-center align-items-center"

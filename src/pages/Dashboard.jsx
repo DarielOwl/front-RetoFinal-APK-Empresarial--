@@ -7,8 +7,8 @@ import AddItemForm from "../components/addItemForm";
 
 
 function Dashboard() {
-  const history = useHistory();
-  const { state } = useContext(AppContext);
+  //const history = useHistory();
+  //const { state } = useContext(AppContext);
   return (
     <main className="dashboard">
       <AddItemForm />

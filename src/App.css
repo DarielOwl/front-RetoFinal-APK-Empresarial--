@@ -23,7 +23,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: green;
+  color: rgb(0, 0, 0);
   font: 700;
 }
 
@@ -42,7 +42,7 @@ h1 {
   margin: 8px;
   width: 79px;
   height: 49px;
-  background: #6fcf97;
+  background: #000000;
   border: 0;
   border-radius: 10px;
   font-weight: bold;
@@ -51,7 +51,7 @@ h1 {
 }
 
 .btn-item:hover {
-  background-color: #9bf3bf;
+  background-color: #000000;
 }
 
 .togglebutton{

@@ -112,7 +112,7 @@ function Login() {
                   />
                 </Form.Group>
 
-                <Button variant="success" type="submit">
+                <Button variant="dark" type="submit">
                   Iniciar
                 </Button>
               </Form>
