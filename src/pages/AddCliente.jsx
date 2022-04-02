@@ -3,6 +3,7 @@ import { useState } from "react";
 const HOST_API = "https://back-retofinal.herokuapp.com";
 
 function AddCliente() {
+
   //Datos Cliente
   const [nombre, setNombre] = useState();
   const [celular, setCelular] = useState();
@@ -16,7 +17,7 @@ function AddCliente() {
       let request = {
         nombre: nombre,
         celular: celular,
-        documentoID: ci,
+        documentoID: documento,
       };
 
       const requestOptions = {
@@ -32,12 +33,13 @@ function AddCliente() {
           console.log(cliente);
         });
     }
+    alert("Cliente Creado!");
     e.target.reset();
   };
 
   //Comprobar que no vayan datos vacios
   const verificarCliente = () => {
-    if (nombre != undefined && celular != undefined && ci != undefined) {
+    if (nombre != undefined && celular != undefined && documento != undefined) {
       return true;
     }
     return false;
@@ -82,7 +84,7 @@ function AddCliente() {
               {" "}
               <input
                 onChange={(event) => {
-                  setCI(event.target.value);
+                    setDocumento(event.target.value);
                 }}
               ></input>
             </td>
@@ -100,4 +102,4 @@ function AddCliente() {
   );
 }
 
-export default GestionCliente;
+export default AddCliente;
